@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D Cube - Elements of Computing Lab4</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #f0f0f0;
+        }
+
+        .cube-container {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            transform-style: preserve-3d;
+            transform: rotateX(30deg) rotateY(45deg);
+        }
+
+        .cube-face {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            opacity: 0.85;
+            border: 1px solid rgba(0,0,0,0.2);
+        }
+
+        .front {
+            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+            transform: translateZ(100px) skewX(5deg) skewY(5deg);
+        }
+
+        .back {
+            background: linear-gradient(135deg, #45b7d1, #96ceb4);
+            transform: translateZ(-100px) rotateY(180deg) skewX(-5deg) skewY(-5deg);
+        }
+
+        .right {
+            background: linear-gradient(135deg, #feca57, #ee5a6f);
+            transform: translateX(100px) rotateY(90deg) skewX(5deg) skewY(-5deg);
+        }
+
+        .left {
+            background: linear-gradient(135deg, #a8e6cf, #dcedc1);
+            transform: translateX(-100px) rotateY(-90deg) skewX(-5deg) skewY(5deg);
+        }
+
+        .top {
+            background: linear-gradient(135deg, #ff9ff3, #54a0ff);
+            transform: translateY(-100px) rotateX(90deg) skewX(5deg) skewY(5deg);
+        }
+
+        .bottom {
+            background: linear-gradient(135deg, #5f27cd, #00d2d3);
+            transform: translateY(100px) rotateX(-90deg) skewX(-5deg) skewY(-5deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="cube-container">
+        <div class="cube-face front"></div>
+        <div class="cube-face back"></div>
+        <div class="cube-face right"></div>
+        <div class="cube-face left"></div>
+        <div class="cube-face top"></div>
+        <div class="cube-face bottom"></div>
+    </div>
+</body>
+</html>
